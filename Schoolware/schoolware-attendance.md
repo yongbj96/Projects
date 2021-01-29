@@ -22,7 +22,7 @@
 
 
 1. <div id="professor">교수계정</div>
-- 출석현황페이지 # att-list
+- <div id="att-list">출석현황페이지</div>
   
   ![attendance01_1](D:\Git\Projects_picture\Schoolware\attendance01_1.PNG)
   
@@ -100,7 +100,7 @@
   
   
   
-- 출석관리페이지 ##att-mgmt
+- <div id="att-mgmt">출석관리페이지</div>
   
   ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
   
@@ -144,7 +144,7 @@
 
 
 
-2. 학생계정 ## student
+2. <div id="student">학생계정</div>
 
    ![attendance05](D:\Git\Projects_picture\Schoolware\attendance05.PNG)
 
@@ -152,7 +152,7 @@
 
    
 
-3. 동작과정 process
+3. <div id="process">동작과정</div>
 
    1. 교수계정에서 `출석`기능 동작
 
