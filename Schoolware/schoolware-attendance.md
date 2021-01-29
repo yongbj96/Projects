@@ -21,10 +21,10 @@
 
 
 
-1. 교수계정 ## professor
-   - 출석현황페이지 ## att_list
+1. 교수계정#professor
+   - 출석현황페이지(#att_list)
 
-     ![attendance01_1](D:\Git\Projects_picture\Schoolware\attendance01_1.PNG)
+     ![](..\..\Projects_picture\Schoolware\attendance01_1.PNG)
 
      ```출석``` 버튼을 통해 출석기능을 동작시킬 수 있고 상단 `숫자`를 통해 해당 주의 출석을 관리하는 페이지로 이동할 수 있습니다.
 
@@ -100,7 +100,7 @@
 
      
 
-   - 출석관리페이지 ## att_mgmt
+   - 출석관리페이지 ##att_mgmt
 
      ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
 
@@ -151,7 +151,7 @@
 
    
 
-3. 동작과정 ## process
+3. 동작과정 (##process)
 
    1. 교수계정에서 `출석`기능 동작
 
