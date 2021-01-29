@@ -6,12 +6,12 @@
 
 ##### 목차
 
-> 1. 교수계정(#professor)
->    - 출석현황페이지(#att_list)
+> 1. [교수계정](#professor)
+>    - [출석현황페이지](#att_list)
 >
->    - 출석관리페이지(#att_mgmt)
-> 2. 학생계정(#student)
-> 3. 동작과정(#process)
+>    - [출석관리페이지](#att_mgmt)
+> 2. [학생계정](#student)
+> 3. [동작과정](#process)
 
 ------
 
@@ -21,8 +21,8 @@
 
 
 
-1. 교수계정#professor
-   - 출석현황페이지#att_list
+1. 교수계정 ## professor
+   - 출석현황페이지 ## att_list
 
      ![attendance01_1](D:\Git\Projects_picture\Schoolware\attendance01_1.PNG)
 
@@ -100,7 +100,7 @@
 
      
 
-   - 출석관리페이지#att_mgmt
+   - 출석관리페이지 ## att_mgmt
 
      ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
 
@@ -143,7 +143,7 @@
 
    
 
-2. 학생계정#student
+2. 학생계정 ## student
 
    ![attendance05](D:\Git\Projects_picture\Schoolware\attendance05.PNG)
 
@@ -151,7 +151,7 @@
 
    
 
-3. 동작과정#process
+3. 동작과정 ## process
 
    1. 교수계정에서 `출석`기능 동작
 
