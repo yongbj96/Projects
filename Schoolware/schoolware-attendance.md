@@ -7,9 +7,9 @@
 ##### 목차
 
 > 1. [교수계정](#professor)
->    - [출석현황페이지](#att_list)
+>    - [출석현황페이지](#att-list)
 >
->    - [출석관리페이지](#att_mgmt)
+>    - [출석관리페이지](#att-mgmt)
 > 2. [학생계정](#student)
 > 3. [동작과정](#process)
 
@@ -21,15 +21,16 @@
 
 
 
-1. 교수계정<a id="#professor">
-   - 출석현황페이지(#att_list)
-
-     ![](.\attendance01_1.PNG)
-
-     ```출석``` 버튼을 통해 출석기능을 동작시킬 수 있고 상단 `숫자`를 통해 해당 주의 출석을 관리하는 페이지로 이동할 수 있습니다.
-
-     
-
+1. #professor교수계정 #professor
+   
+- 출석현황페이지 # att-list
+   
+  ![attendance01_1](D:\Git\Projects_picture\Schoolware\attendance01_1.PNG)
+   
+  ```출석``` 버튼을 통해 출석기능을 동작시킬 수 있고 상단 `숫자`를 통해 해당 주의 출석을 관리하는 페이지로 이동할 수 있습니다.
+   
+  
+   
      ```java
      //출석체크
      	@RequestMapping( value="/room/manager/selectAttendance.do")
@@ -58,18 +59,18 @@
      
      		return mv;
      	}
-     ```
-
-     `att_data`: 특정 모임방의 출석 데이터를 불러와 렌더링하는 페이지에 값을 전송하는 역할을 수행합니다.
-
-     `att_user`: 매주 학생들의 출석값을 불러와 나타내는 역할을 수행합니다.
-
-     `week_total`: 하단의 출석, 결석, 지각 통계값을 나타내기 위해 사용했습니다.
-
-     `total`: 모임방에서 학생이 갖는 최종 출결값을 나타내기 위해 사용했습니다.
-
-     
-
+  ```
+   
+  `att_data`: 특정 모임방의 출석 데이터를 불러와 렌더링하는 페이지에 값을 전송하는 역할을 수행합니다.
+   
+  `att_user`: 매주 학생들의 출석값을 불러와 나타내는 역할을 수행합니다.
+   
+  `week_total`: 하단의 출석, 결석, 지각 통계값을 나타내기 위해 사용했습니다.
+   
+  `total`: 모임방에서 학생이 갖는 최종 출결값을 나타내기 위해 사용했습니다.
+   
+  
+   
      ```sql
      <!-- 모임방 회원, 출석값 가져오기 -->
      	<select id="Attroom_user" parameterType="hashmap" resultType="hashmap">
@@ -90,24 +91,24 @@
      				stu.grade, u.id
      		]]>
      	</select>
-     ```
-
-     `week_total`의 경우 DB에 값을 따로 저장하고 있지 않기 때문에 `attendance`를 통해 학생들의 출석값들을 불러와 Impl에서 연산을 하고 Controller에서 `total`로 분리하여 JSP페이지에 전송하였습니다.
-
-     
-
-     ```교수계정에서 출석기능을 잘못 동작시키거나 학생들의 사정으로 인해 출석 값을 임의로 변경해야되는 상황이 있을 수 있기 때문에 출석을 관리할 수 있는 페이지를 추가로 제작하였습니다. ```
-
-     
-
-   - 출석관리페이지 ##att_mgmt
-
-     ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
-
-   출석현황페이지의 상단 `숫자`를 통해서 이동할 수 있습니다. 해당 페이지에서는 입력한 숫자에 해당하는 주의 출석현황을 삭제할 수 있고 학생들의 출석 값을 임의로 수정할 수 있습니다.
-
+  ```
+   
+  `week_total`의 경우 DB에 값을 따로 저장하고 있지 않기 때문에 `attendance`를 통해 학생들의 출석값들을 불러와 Impl에서 연산을 하고 Controller에서 `total`로 분리하여 JSP페이지에 전송하였습니다.
+   
+  
+   
+  ```교수계정에서 출석기능을 잘못 동작시키거나 학생들의 사정으로 인해 출석 값을 임의로 변경해야되는 상황이 있을 수 있기 때문에 출석을 관리할 수 있는 페이지를 추가로 제작하였습니다. ```
+   
+  
+   
+- 출석관리페이지 ##att-mgmt
+   
+  ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
+   
+출석현황페이지의 상단 `숫자`를 통해서 이동할 수 있습니다. 해당 페이지에서는 입력한 숫자에 해당하는 주의 출석현황을 삭제할 수 있고 학생들의 출석 값을 임의로 수정할 수 있습니다.
    
 
+   
    ```java
    @RequestMapping(value="/room/manager/del_Att.do")
    	public ModelAndView del_Att(CommandMap commandMap) throws Exception {
@@ -135,14 +136,14 @@
    
    		return  mv;
    	}
-   ```
-
-   `delete_Attendance`: `room_code`와 `week`값을 통해 저장된 주의 출석값과 학생들에게 임의로 입력된 출석값들을 삭제하는 기능을 수행합니다.
-
-   학생의 출석값을 임의로 변경하게 되면 값들을 배열형태로 받아오기 때문에 반복문을 통해서 `map`에 입력을하고 `Att_edit_func`에 전송하여 출석 값들을 변경하는 기능을 수행합니다.
-
+```
+   
+`delete_Attendance`: `room_code`와 `week`값을 통해 저장된 주의 출석값과 학생들에게 임의로 입력된 출석값들을 삭제하는 기능을 수행합니다.
+   
+학생의 출석값을 임의로 변경하게 되면 값들을 배열형태로 받아오기 때문에 반복문을 통해서 `map`에 입력을하고 `Att_edit_func`에 전송하여 출석 값들을 변경하는 기능을 수행합니다.
    
 
+   
 2. 학생계정 ## student
 
    ![attendance05](D:\Git\Projects_picture\Schoolware\attendance05.PNG)
@@ -151,7 +152,7 @@
 
    
 
-3. 동작과정 (##process)
+3. 동작과정 process
 
    1. 교수계정에서 `출석`기능 동작
 
