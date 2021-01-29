@@ -24,7 +24,7 @@
 1. <div id="professor">교수계정</div>
 - <div id="att-list">출석현황페이지</div>
   
-  ![attendance01_1](D:\Git\Projects_picture\Schoolware\attendance01_1.PNG)
+  ![attendance01_1](https://user-images.githubusercontent.com/43952470/106319410-c09bbf80-62b4-11eb-9d51-529155c8b398.PNG)
   
   ```출석``` 버튼을 통해 출석기능을 동작시킬 수 있고 상단 `숫자`를 통해 해당 주의 출석을 관리하는 페이지로 이동할 수 있습니다.
   
@@ -102,7 +102,7 @@
   
 - <div id="att-mgmt">출석관리페이지</div>
   
-  ![attendance01_2](D:\Git\Projects_picture\Schoolware\attendance01_2.PNG)
+  ![attendance01_2](https://user-images.githubusercontent.com/43952470/106319533-ecb74080-62b4-11eb-8621-91a3f55ac43e.PNG)
   
 
 출석현황페이지의 상단 `숫자`를 통해서 이동할 수 있습니다. 해당 페이지에서는 입력한 숫자에 해당하는 주의 출석현황을 삭제할 수 있고 학생들의 출석 값을 임의로 수정할 수 있습니다.
@@ -146,7 +146,7 @@
 
 2. <div id="student">학생계정</div>
 
-   ![attendance05](D:\Git\Projects_picture\Schoolware\attendance05.PNG)
+   ![attendance05](https://user-images.githubusercontent.com/43952470/106319554-f50f7b80-62b4-11eb-84b5-eaa955dfaa01.PNG)
 
    학생계정의 출석현황페이지에서는 `출석`버튼을 통해 교수계정에서 동작시켜 발생한 난수를 입력할 수 있고 출석현황을 조회할 수 있습니다.
 
@@ -156,7 +156,7 @@
 
    1. 교수계정에서 `출석`기능 동작
 
-      ![attendance02](D:\Git\Projects_picture\Schoolware\attendance02.PNG)
+      ![attendance02](https://user-images.githubusercontent.com/43952470/106319570-fb055c80-62b4-11eb-91d6-85e908e04a19.PNG)
 
       수업의 주(default=마지막 출결날짜+1)와 수업날짜를 입력
 
@@ -214,13 +214,13 @@
 
    2. 임의의 난수 발생
 
-      ![attendance03](D:\Git\Projects_picture\Schoolware\attendance03.PNG)
+      ![attendance03](https://user-images.githubusercontent.com/43952470/106319583-0193d400-62b5-11eb-96c8-0141c1e5afbb.PNG)
 
       
 
    3. 학생계정에서 임의의 난수를 입력
 
-      ![attendance06](D:\Git\Projects_picture\Schoolware\attendance06.PNG)
+      ![attendance06](https://user-images.githubusercontent.com/43952470/106319603-0789b500-62b5-11eb-8a6c-03e916c47793.PNG)
 
       ```java
       @Override
@@ -278,7 +278,7 @@
 
    4. 시간에 따른 출석값 입력
 
-      ![attendance07](D:\Git\Projects_picture\Schoolware\attendance07.PNG)
+      ![attendance07](https://user-images.githubusercontent.com/43952470/106319617-0d7f9600-62b5-11eb-88ef-7938dc35f615.PNG)
 
       `-`: 기능동작 후 0~10분동안 유지되는 값으로 출석기능이 동작중일 때, 나타나는 값입니다.
 
