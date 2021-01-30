@@ -166,7 +166,7 @@ var slideIndex = 1;
 ---
 
 - <div id="table">로그인테이블</div>
-  - 기본적으로 session값이 없을때, 로그인기능을 수행할 수 있도록 [코딩](#coding)하였습니다.
+  - 기본적으로 session값이 없을때, 로그인기능을 수행할 수 있도록 하였습니다.코드[이동](#coding)
 
   ![MainPage03](https://user-images.githubusercontent.com/43952470/106341477-c7402c00-62e0-11eb-8f84-cd5c322a6576.PNG)
 
