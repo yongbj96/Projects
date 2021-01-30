@@ -6,7 +6,7 @@
 
 > 1. [썸네일](#thumbnail)
 >    1. [페이징처리](#paging)
->    2. [학과 Search](#search)
+>    2. 학과 Search
 >    3. Modal
 > 2. [로그인테이블](#table)
 >    1. [매니저](#manager)
