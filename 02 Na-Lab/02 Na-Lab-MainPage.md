@@ -165,45 +165,43 @@ var slideIndex = 1;
 
 ---
 
-- <div>
-<div id="table">로그인테이블</div>
+- <div id="table">로그인테이블</div>
+  - 기본적으로 session값이 없을때, 로그인기능을 수행할 수 있도록 [코딩](#coding)하였습니다.
 
-- 기본적으로 session값이 없을때, 로그인기능을 수행할 수 있도록 [코딩](#coding)하였습니다.
-  
   ![MainPage03](https://user-images.githubusercontent.com/43952470/106341477-c7402c00-62e0-11eb-8f84-cd5c322a6576.PNG)
+
   
-  
-  
-- 권한(auth)
-  
-  - <div id="manager">매니저(4)</div>
-  
+
+  - 권한(auth)
+
+    - <div id="manager">매니저(4)</div>
+
     ![MainPage04](https://user-images.githubusercontent.com/43952470/106341479-cad3b300-62e0-11eb-8b42-066ebfd796ae.PNG)
-  
+
     매니저 권한에서는 센터에서 운영하는 `Lab예산` 및 `캡스톤디자인예산`을 조회할 수 있으며 운영중인 모임방현황을 확인할 수 있도록 테이블을 구성하였습니다.
-  
+
     
-  
-  - <div id="professor">교수(3)</div>
-  
+
+    - <div id="professor">교수(3)</div>
+
     ![MainPage05](https://user-images.githubusercontent.com/43952470/106341483-cf986700-62e0-11eb-9845-74d09f262947.PNG)
-  
+
     교수계정에서는 교수가 운영중인 `Lab모임방` 및 `캡스톤디자인`의 예산사용현황을 조회할 수 있으며 강의에서 구성된 팀의 수를 조회할 수 있도록 테이블을 구성하였습니다.
-  
+
     
-  
-  - <div id="assistant">조교(2)</div>
-  
+
+    - <div id="assistant">조교(2)</div>
+
     ![MainPage06](https://user-images.githubusercontent.com/43952470/106341488-d45d1b00-62e0-11eb-9511-f95a18a9de90.PNG)
-  
+
     조교계정에서는 학과에서 운영중인 `Lab예산` 및 `캡스톤디자인예산`을 조회할 수 있습니다. 추가로 최하단에 학생들이 신청한 물품요청알림을 메인페이지에서 바로 확인할 수 있도록 테이블을 구성하였습니다.
-  
+
     
-  
-  - <div id="student">학생(1)</div>
-  
+
+    - <div id="student">학생(1)</div>
+
     ![MainPage07](https://user-images.githubusercontent.com/43952470/106341495-da52fc00-62e0-11eb-85c8-9a5be2b665ff.PNG)
-  
+
       학생계정에서는 학생팀의 예산사용내역을 조회할 수 있도록 구현하였으며 `Lab모임방` 또는 `캡스톤디자인`의 과제목록을 확인할 수 있도록 테이블을 구성하였습니다. 추가로 과제목록은 미제출한 과제들을 대상으로 날짜 순서대로 나타나도록 구현하였습니다.
 
 

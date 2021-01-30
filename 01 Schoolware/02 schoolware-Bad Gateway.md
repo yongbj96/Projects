@@ -8,7 +8,7 @@
 
 ![Bad Gateway11](https://user-images.githubusercontent.com/43952470/106335518-58f36d80-62d0-11eb-908e-df6949bb6ab2.PNG)
 
-스쿨웨어 홈페이지를 유지보수 하던중에 메인 페이지에서 502 Bad Gateway오류가 발생하는것을 확인하였습니다. 따라서, 서버컴퓨터(centOS)의 작업관리자(top)를 확인하였고 `java`와 `mysqld`에서 과부하가 걸리고있다는 것을 확인하였습니다.
+스쿨웨어 홈페이지를 유지보수 하던중에 메인 페이지에서 502 Bad Gateway오류가 발생하는것을 확인하였습니다. 따라서, 서버컴퓨터(centOS)의 작업관리자(top)를 확인하였고 `java`와 `mysqld`에서 과부하가 발생하는 것을 확인하였습니다.
 
 
 
@@ -78,9 +78,7 @@
         	re.student_id = #{id}
         ORDER BY
         	write_date DESC
-    )
-    UNION
-    (
+    ) UNION (
         SELECT
         	p.id,p.title,p.write_date,p.post_num,p.room_code,n.subject_name as room_name,@room_type:='subject' as room_type,b.board_type
         FROM
@@ -106,21 +104,21 @@
         AND
         	re.student_id = #{id}
         <if test="open_year != null">
-        	AND n.open_year = #{open_year}
+        AND n.open_year = #{open_year}
         </if>
         <if test='season != null'>
-        	AND n.season = #{season}
+        AND n.season = #{season}
         </if>
         ORDER BY write_date DESC
-		)
-		ORDER BY write_date DESC
-		<if test='limit != null'>
-			limit #{limit}
-		</if>
-		<if test='limit == null'>
-			limit 10
-		</if>
-	</select>
+	)
+	ORDER BY write_date DESC
+	<if test='limit != null'>
+	limit #{limit}
+	</if>
+	<if test='limit == null'>
+	limit 10
+	</if>
+</select>
 ```
 
 코드가 한눈에 들어오지 않아 연산과정을 도식화 시켜보게 되었고 아래와 같은 결과를 얻게 되었습니다.
@@ -135,9 +133,9 @@
 
 - #### 변경 후 코드
 
-```java
+```sql
 <!-- 수강중인 모임방의 최신 글 10개만 -->
-<select id="selectRegRoomPostInfoLimit10" parameterType="hashmap" resultType="hashmap">
+<select ...생략...>
     (
     	SELECT
 			p.write_date, p.post_num, p.room_code, @room_type:='normal' as room_type, p.title
@@ -189,18 +187,18 @@
         AND
         	n.setup = 1
         <if test="open_year != null">
-        	AND n.open_year = #{open_year}
+        AND n.open_year = #{open_year}
         </if>
         <if test='season != null'>
-        	AND n.season = #{season}
+        AND n.season = #{season}
         </if>
 	)
 	ORDER BY write_date DESC
 	<if test='limit != null'>
-		limit #{limit}
+	limit #{limit}
 	</if>
 	<if test='limit == null'>
-		limit 10
+	limit 10
 	</if>
 </select>
 ```
