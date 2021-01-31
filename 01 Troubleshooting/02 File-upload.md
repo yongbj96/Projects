@@ -19,7 +19,8 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
 
    ``` nginx
    {
-           ...생략...
+           생략
+           
            "HostConfig": {
                "Binds": [
                    "/etc/letsencrypt:/etc/nginx/ssl",
@@ -50,19 +51,20 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
                    "/file:/nginx_server/file",
                    "/chat:/nginx_server/chat"
                ],
-               ...생략...,
-       }
+               
+               생략
+    }
    ```
 
    위는 현재 `docker container`를 `inspect`한 것으로
-
+   
    ```
    -p 443:443 -p 80:80
    -v /etc/letsencrypt:/etc/nginx/ssl
    -v /etc/localtime:/etc/localtime
    -v /usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files
    -v /usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files
-   -l ~
+-l ~
    ```
 
    의 명령어를 사용했다는 것을 유추할 수 있었고 해당 명령어들을 사용하여 새 `docker container`를 생성했습니다.
@@ -72,9 +74,9 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
    파일업로드 시, `Tomcat`에는 파일이 전송되지만 `server`와 `nginx`에는 전송되지 않은 것을 통해 `tomcat`과 `server` 사이에 바인드가 되어있지 않다는 것을 알게되었습니다. 이후 `-v`옵션을 추가하여 `nalab`서버를 동작시킬 `tomcat`컨테이너를 생성했습니다.
 
    
-
+   
    ``` nginx
-   \cdots\cdots\cdots생략\cdots\cdots\cdots
+   생략
    
    "Binds": [
                    "/usr/etc/dockers/web/tomcat/nalab/files/file:/usr/local/tomcat/files/file",
@@ -82,8 +84,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
                    "/usr/etc/dockers/web/tomcat/nalab/webapps:/usr/local/tomcat/webapps/"
                ],
    
-   \cdots\cdots\cdots생략\cdots\cdots\cdots
-   
+   생략
    ```
    
    다음과 같이 정상적으로 컨테이너를 동작시키게 되었고 파일업로드를 하게되면 `/usr/local/tomcat/files/file`위치에 파일이 저장되는 것도 확인했습니다.
@@ -101,13 +102,13 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
    
 
    ``` nginx
-   \cdots\cdots\cdots생략\cdots\cdots\cdots
+   생략
       
       server {
       	listen 443;
       	server_name icnet.kornu.ac.kr;
       
-          \cdots\cdots\cdots생략\cdots\cdots\cdots
+          생략
       
           location ^~/sch/files/file/{
           	root /etc/nginx/;
@@ -137,7 +138,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
           	proxy_pass http://nalab/nalab/;
           }
       
-          \cdots\cdots\cdots생략\cdots\cdots\cdots
+          생략
       }
    ```
 
