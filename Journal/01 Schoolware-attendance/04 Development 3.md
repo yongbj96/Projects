@@ -76,53 +76,53 @@ Development 2에서 발생한 문제점
 
    ![attendance44](https://user-images.githubusercontent.com/43952470/106374752-34c78780-63c9-11eb-938c-cfdebd21c7fe.PNG)
 
-``` java
-   @Override
-   public boolean insert_stuAtt(Map<String, Object> map, HttpServletRequest req) throws Exception {
-       boolean flag = false ;
-       
-       Map<String, Object> room_data = roomDAO.Att_week_data(map) ; //방에있는 마지막 출석정보를 가져온 리스트 week, number, date
-       if(room_data.get("number").toString().equals(map.get("number").toString())) { //room_data와 map의 number가 같으면 출석
-           SimpleDateFormat format_type = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") ; /* 선언부 */
-           Calendar cal = Calendar.getInstance() ;
-           Date now = new Date() ;
-           String room_time = room_data.get("date").toString() ;
-           
-           Date _late_time = format_type.parse(room_time) ;
-           cal.setTime(_late_time) ;
-           cal.add(Calendar.MINUTE, 3) ; /* 지각시간 설정, 3분*/
-           Date late_time = cal.getTime() ;
-           
-           Date _end_time = format_type.parse(room_time) ;
-           cal.setTime(_end_time) ;
-           cal.add(Calendar.MINUTE, 10) ; /* 결석시간 설정, 10분 */
-           Date end_time = cal.getTime() ;
-           
-           Map<String, Object> resultMap = new HashMap<>() ;
-           resultMap.put("room_code", map.get("room_code")) ;
-           resultMap.put("week", room_data.get("week")) ;
-           resultMap.put("id", ((HashMap)(req.getSession().getAttribute("user_info"))).get("id")) ;
-           if(now.getTime() <= late_time.getTime()) {
-               resultMap.put("attendance", "O") ;
-               roomDAO.insert_stuAtt(resultMap) ;
-               roomDAO.add_total_circle(resultMap) ;
-               flag = true ;
-           } else if(now.getTime() <= end_time.getTime() && now.getTime() >= late_time.getTime()) {
-               resultMap.put("attendance", "X") ;
-               roomDAO.insert_stuAtt(resultMap) ;
-               roomDAO.add_total_x(resultMap) ;
-               flag = true ;
-           } else {
-               resultMap.put("attendance", "/") ;
-               roomDAO.insert_stuAtt(resultMap) ;
-               roomDAO.add_total_slash(resultMap) ;
-               flag = true ;
-           }
-       }
-       
-       return flag ;
-   }
-```
+   ``` java
+      @Override
+      public boolean insert_stuAtt(Map<String, Object> map, HttpServletRequest req) throws Exception {
+          boolean flag = false ;
+
+          Map<String, Object> room_data = roomDAO.Att_week_data(map) ; //방에있는 마지막 출석정보를 가져온 리스트 week, number, date
+          if(room_data.get("number").toString().equals(map.get("number").toString())) { //room_data와 map의 number가 같으면 출석
+              SimpleDateFormat format_type = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") ; /* 선언부 */
+              Calendar cal = Calendar.getInstance() ;
+              Date now = new Date() ;
+              String room_time = room_data.get("date").toString() ;
+
+              Date _late_time = format_type.parse(room_time) ;
+              cal.setTime(_late_time) ;
+              cal.add(Calendar.MINUTE, 3) ; /* 지각시간 설정, 3분*/
+              Date late_time = cal.getTime() ;
+
+              Date _end_time = format_type.parse(room_time) ;
+              cal.setTime(_end_time) ;
+              cal.add(Calendar.MINUTE, 10) ; /* 결석시간 설정, 10분 */
+              Date end_time = cal.getTime() ;
+
+              Map<String, Object> resultMap = new HashMap<>() ;
+              resultMap.put("room_code", map.get("room_code")) ;
+              resultMap.put("week", room_data.get("week")) ;
+              resultMap.put("id", ((HashMap)(req.getSession().getAttribute("user_info"))).get("id")) ;
+              if(now.getTime() <= late_time.getTime()) {
+                  resultMap.put("attendance", "O") ;
+                  roomDAO.insert_stuAtt(resultMap) ;
+                  roomDAO.add_total_circle(resultMap) ;
+                  flag = true ;
+              } else if(now.getTime() <= end_time.getTime() && now.getTime() >= late_time.getTime()) {
+                  resultMap.put("attendance", "X") ;
+                  roomDAO.insert_stuAtt(resultMap) ;
+                  roomDAO.add_total_x(resultMap) ;
+                  flag = true ;
+              } else {
+                  resultMap.put("attendance", "/") ;
+                  roomDAO.insert_stuAtt(resultMap) ;
+                  roomDAO.add_total_slash(resultMap) ;
+                  flag = true ;
+              }
+          }
+
+          return flag ;
+      }
+   ```
 
    `2.2.`의 기능이 동작하면서 난수와 난수가 발생한 시간을 `class_att_data`에 저장하게 되는데, 학생이 난수를 입력하면 입력한 시간과 저장된 시간을 비교하고 출석값을 자동으로 저장합니다.
 
