@@ -34,7 +34,7 @@ Development 1에서 발생한 문제점
 
    
 
-   ##### 1.3. 출석값 변경(RoomController)
+   ##### 1.3. 출석값 변경
 
    ```java
 @RequestMapping(value="/room/manager/Att_edit_func.do")
@@ -56,6 +56,8 @@ Development 1에서 발생한 문제점
    	return  mv;
    }
    ```
+   
+   
    
    여러 학생들을 모임방에 생성하고 값들을 주고받으면서 코딩을 진행하여 기능을 정상적으로 제작하였으나
    `학생이 없거나 1명일 때` 오류가 발생하였고 파라미터의 갯수에 따라
