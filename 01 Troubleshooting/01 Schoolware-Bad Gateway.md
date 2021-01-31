@@ -133,7 +133,7 @@
 
    ``` sql
    <!-- 수강중인 모임방의 최신 글 10개만 -->
-   <select 생략>
+   <select ...생략...>
        (
        	SELECT
    			p.write_date, p.post_num, p.room_code, @room_type:='normal' as room_type, p.title
