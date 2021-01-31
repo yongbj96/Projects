@@ -28,7 +28,9 @@
    
    `공지글부분`: 나사렛대학교 홈페이지를 크롤링해서 사용자에게 출력해주는 기능<br/>
    `수업시간표`: 학생의 강의내용을 DB에서가져와 테이블로 출력해주는 기능<br/>
-   `공지&QnA&FAQ`: 홈페이지의 게시판의 글을 출력해주는 기능<br/>`모임방썸네일`: 수강중인 강의들을 불러와 썸네일방식으로 출력하여 포워딩시켜주는 기능<br/>`학사일정`: 학교 홈페이지의 학사일정 부분을 크롤링해서 사용자에게 출력하는 기능<br/>
+   `공지&QnA&FAQ`: 홈페이지의 게시판의 글을 출력해주는 기능<br/>
+   `모임방썸네일`: 수강중인 강의들을 불러와 썸네일방식으로 출력하여 포워딩시켜주는 기능<br/>
+   `학사일정`: 학교 홈페이지의 학사일정 부분을 크롤링해서 사용자에게 출력하는 기능<br/>
 
    
 
@@ -44,7 +46,7 @@
 
    ``` sql
    <!-- 수강중인 모임방의 최신 글 10개만 -->
-   <select 생략>
+   <select ...생략...>
        (
            SELECT
            	p.id,p.title,p.write_date,p.post_num,p.room_code,n.room_name,@room_type:='normal' as room_type,b.board_type
@@ -131,7 +133,7 @@
 
    ``` sql
    <!-- 수강중인 모임방의 최신 글 10개만 -->
-   <select 생략>
+   <select ...생략...>
        (
        	SELECT
    			p.write_date, p.post_num, p.room_code, @room_type:='normal' as room_type, p.title

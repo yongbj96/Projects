@@ -5,7 +5,8 @@
 
 
 ```
-개발환경을 구축한 이후 프로젝트에 참여한 인원들끼리 각자 개발할 부분을 나누었으며 개발환경구축을 하기도 했고 홈페이지 제작이후에 서버구축까지 완수해야했기 때문에 메인페이지와 상단 Topbar위주로 개발을 맡게되었습니다.
+개발환경을 구축한 이후 프로젝트에 참여한 인원들끼리 각자 개발할 부분을 나누었으며
+개발환경구축을 하기도 했고 홈페이지 제작이후 서버구축까지 완수해야했기 때문에 메인페이지와 상단 Topbar위주로 개발을 맡게되었습니다.
 ```
 
 
@@ -66,52 +67,52 @@
    또한 `commonService.major_list`을 통해서 학과 리스트의 값을 전달하여 특정학과들만 검색할 수 있도록 구현하였습니다.
    
    ``` html
-   <%-- 테이블을 나누어 페이징처리 -->
-       <div style="min-width: 710px; max-width: 870px; height: 450px;" class="card-body">
-           <div>
-               <c:if test="${empty thumbnail_list}">
-                   <div style="margin-top: 100px; text-align: center;">
-                       <i class="fas fa-chalkboard-teacher" style="font-size: 70px;"></i>
-                       <p>아직 등록된 모임방이 없습니다.</p>
-                       <p>모임방을 만들면 온라인에서 과제관리, 재정관리, 물품요청을 할 수 있습니다.</p>
-                   </div>
-               </c:if>
-   
-               <c:forEach items="${thumbnail_list}" var="list">
-                   <div class="mySlides fade2">
-                       <div class="thumb_test_body">
-                           <c:forEach items="${list}" var="thumbnail">
-                               <a class="thumb_body" href="#${thumbnail.lab_code}_show" data-toggle="modal">
-                                   <div class="imgdiv">
-                                       <c:choose>
-                                           <c:when test="${thumbnail.photo ne null}">
-                                               <img class="thumb_img" src="https://icnet.kornu.ac.kr/nalab/files/file/${thumbnail.photo}">
-                                           </c:when>
-                                           <c:otherwise>
-                                               <img class="thumb_img" src="${pageContext.request.contextPath}/assets/img/img.jpg">
-                                           </c:otherwise>
-                                       </c:choose>
-                                   </div>
-                                   <article class="article">
-                                       <h1 class="title">
-                                           ${thumbnail.lab_title}
-                                       </h1>
-                                       <span class="contentpost">
-                                           (${thumbnail.name}교수님)
-                                       </span>
-                                   </article>
-                               </a>
-                           </c:forEach>
-                       </div>
-                   </div>
-               </c:forEach>
-           </div>
-       </div>
-       <div style="text-align: center; height: 48px;">
-           <c:forEach var="index" begin="1" step="1" end="${max_index}">
-               <span class="dot" onclick="currentSlide(${index})"></span>
-           </c:forEach>
-       </div>
+      <%-- 테이블을 나누어 페이징처리 -->
+    <div style="min-width: 710px; max-width: 870px; height: 450px;" class="card-body">
+        <div>
+            <c:if test="${empty thumbnail_list}">
+                <div style="margin-top: 100px; text-align: center;">
+                    <i class="fas fa-chalkboard-teacher" style="font-size: 70px;"></i>
+                    <p>아직 등록된 모임방이 없습니다.</p>
+                    <p>모임방을 만들면 온라인에서 과제관리, 재정관리, 물품요청을 할 수 있습니다.</p>
+                </div>
+            </c:if>
+
+            <c:forEach items="${thumbnail_list}" var="list">
+                <div class="mySlides fade2">
+                    <div class="thumb_test_body">
+                        <c:forEach items="${list}" var="thumbnail">
+                            <a class="thumb_body" href="#${thumbnail.lab_code}_show" data-toggle="modal">
+                                <div class="imgdiv">
+                                    <c:choose>
+                                        <c:when test="${thumbnail.photo ne null}">
+                                            <img class="thumb_img" src="https://icnet.kornu.ac.kr/nalab/files/file/${thumbnail.photo}">
+                                        </c:when>
+                                        <c:otherwise>
+                                            <img class="thumb_img" src="${pageContext.request.contextPath}/assets/img/img.jpg">
+                                        </c:otherwise>
+                                    </c:choose>
+                                </div>
+                                <article class="article">
+                                    <h1 class="title">
+                                        ${thumbnail.lab_title}
+                                    </h1>
+                                    <span class="contentpost">
+                                        (${thumbnail.name}교수님)
+                                    </span>
+                                </article>
+                            </a>
+                        </c:forEach>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+    <div style="text-align: center; height: 48px;">
+        <c:forEach var="index" begin="1" step="1" end="${max_index}">
+            <span class="dot" onclick="currentSlide(${index})"></span>
+        </c:forEach>
+    </div>
    ```
    
    `thumbnail_list`통해 받아온 `썸네일`을 분리될 수 있도록 하였으며 사용자가 클릭한 `index`의 테이블만 보일 수 있도록 `script`코딩하였습니다.

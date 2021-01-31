@@ -19,40 +19,40 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
 
    ``` nginx
    {
-           생략
+        ...생략...
            
-           "HostConfig": {
-               "Binds": [
-                   "/etc/letsencrypt:/etc/nginx/ssl",
-                   "/etc/localtime:/etc/localtime",
-                   "/usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files",
-                   "/usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files"
-               ],
-               "NetworkMode": "default",
-               "PortBindings": {
-                   "443/tcp": [
-                       {
-                           "HostIp": "",
-                           "HostPort": "443"
-                       }
-                   ],
-                   "80/tcp": [
-                       {
-                           "HostIp": "",
-                           "HostPort": "80"
-                       }
-                   ]
-               },
-               "Links": [
-                   "/schoolware:/nginx_server/schoolware",
-                   "/eportfolio:/nginx_server/e-portfolio",
-                   "/nalab:/nginx_server/nalab",
-                   "/push:/nginx_server/push",
-                   "/file:/nginx_server/file",
-                   "/chat:/nginx_server/chat"
-               ],
-               
-               생략
+        "HostConfig": {
+            "Binds": [
+                "/etc/letsencrypt:/etc/nginx/ssl",
+                "/etc/localtime:/etc/localtime",
+                "/usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files",
+                "/usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files"
+            ],
+            "NetworkMode": "default",
+            "PortBindings": {
+                "443/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "443"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "Links": [
+                "/schoolware:/nginx_server/schoolware",
+                "/eportfolio:/nginx_server/e-portfolio",
+                "/nalab:/nginx_server/nalab",
+                "/push:/nginx_server/push",
+                "/file:/nginx_server/file",
+                "/chat:/nginx_server/chat"
+            ],
+
+         ...생략...
     }
    ```
 
@@ -64,7 +64,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
    -v /etc/localtime:/etc/localtime
    -v /usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files
    -v /usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files
--l ~
+   -l ~
    ```
 
    의 명령어를 사용했다는 것을 유추할 수 있었고 해당 명령어들을 사용하여 새 `docker container`를 생성했습니다.
@@ -76,7 +76,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
    
    
    ``` nginx
-   생략
+   ...생략...
    
    "Binds": [
                    "/usr/etc/dockers/web/tomcat/nalab/files/file:/usr/local/tomcat/files/file",
@@ -84,7 +84,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
                    "/usr/etc/dockers/web/tomcat/nalab/webapps:/usr/local/tomcat/webapps/"
                ],
    
-   생략
+   ...생략...
    ```
    
    다음과 같이 정상적으로 컨테이너를 동작시키게 되었고 파일업로드를 하게되면 `/usr/local/tomcat/files/file`위치에 파일이 저장되는 것도 확인했습니다.
@@ -102,13 +102,13 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
    
 
    ``` nginx
-   생략
+   ...생략...
       
       server {
       	listen 443;
       	server_name icnet.kornu.ac.kr;
       
-          생략
+          ...생략...
       
           location ^~/sch/files/file/{
           	root /etc/nginx/;
@@ -138,7 +138,7 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
           	proxy_pass http://nalab/nalab/;
           }
       
-          생략
+          ...생략...
       }
    ```
 
