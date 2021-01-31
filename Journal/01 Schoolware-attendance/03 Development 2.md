@@ -36,7 +36,7 @@ Development 1에서 발생한 문제점
 
    ##### 1.3. 출석값 변경
 
-   ```java
+```java
 @RequestMapping(value="/room/manager/Att_edit_func.do")
    public ModelAndView Att_edit_func(CommandMap commandMap) throws Exception {
 	ModelAndView mv = new ModelAndView("redirect:/room/manager/detailAtt.do");
@@ -55,7 +55,7 @@ Development 1에서 발생한 문제점
    
    	return  mv;
    }
-   ```
+```
    
    
    
