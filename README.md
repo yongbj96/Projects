@@ -33,5 +33,5 @@ This is based on projects I made attending while University, 2015-2020.
   >
   >
   >
-  >#### [Build server](https://github.com/yongbj96/Projects/blob/main/02%20Journal/03%20Server-Build/01%20Server-Build.md)
+  >#### [Build server](https://github.com/yongbj96/Projects/blob/main/02%20Journal/03%20Server-Build/01%20Server-Build.md).md
 
