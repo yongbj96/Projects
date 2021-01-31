@@ -15,7 +15,7 @@ This is based on projects I made attending while University, 2015-2020.
 
 - ### Journal
 
-  >#### [Func. attendance](https://github.com/yongbj96/Projects/tree/main/02%20Journal/01%20Schoolware-attendance)
+  >#### [Func. attendance](https://github.com/yongbj96/Projects/tree/main/02%20Journal/01%20Schoolware-attendance)[Dirertory]
   >
   >- [Plan](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/01%20Plan.md)
   >- [Development 1](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/02%20Development%201.md)
@@ -24,7 +24,7 @@ This is based on projects I made attending while University, 2015-2020.
   >
   >
   >
-  >#### [Project. Na-Lab](https://github.com/yongbj96/Projects/tree/main/02%20Journal/02%20NaLab-Project)
+  >#### [Project. Na-Lab](https://github.com/yongbj96/Projects/tree/main/02%20Journal/02%20NaLab-Project)[Directory]
   >
   >- [Gideline](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/01%20Build.md)
   >- [Bootstrap](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/02%20Bootstrap.md)
@@ -33,5 +33,5 @@ This is based on projects I made attending while University, 2015-2020.
   >
   >
   >
-  >#### [Build server](https://github.com/yongbj96/Projects/blob/main/02%20Journal/03%20Server-Build/01%20Server-Build.md)(md FILE)
+  >#### [Build server](https://github.com/yongbj96/Projects/blob/main/02%20Journal/03%20Server-Build/01%20Server-Build.md)
 
