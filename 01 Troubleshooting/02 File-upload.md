@@ -19,40 +19,40 @@ Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를
 
    ``` nginx
    {
-           ...생략..
+        ...생략..
            
-           "HostConfig": {
-               "Binds": [
-                   "/etc/letsencrypt:/etc/nginx/ssl",
-                   "/etc/localtime:/etc/localtime",
-                   "/usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files",
-                   "/usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files"
-               ],
-               "NetworkMode": "default",
-               "PortBindings": {
-                   "443/tcp": [
-                       {
-                           "HostIp": "",
-                           "HostPort": "443"
-                       }
-                   ],
-                   "80/tcp": [
-                       {
-                           "HostIp": "",
-                           "HostPort": "80"
-                       }
-                   ]
-               },
-               "Links": [
-                   "/schoolware:/nginx_server/schoolware",
-                   "/eportfolio:/nginx_server/e-portfolio",
-                   "/nalab:/nginx_server/nalab",
-                   "/push:/nginx_server/push",
-                   "/file:/nginx_server/file",
-                   "/chat:/nginx_server/chat"
-               ],
-               
-               ...생략...
+        "HostConfig": {
+            "Binds": [
+                "/etc/letsencrypt:/etc/nginx/ssl",
+                "/etc/localtime:/etc/localtime",
+                "/usr/etc/dockers/web/tomcat/schoolware/files:/etc/nginx/sch/files",
+                "/usr/etc/dockers/web/tomcat/nalab/files:/etc/nginx/nalab/files"
+            ],
+            "NetworkMode": "default",
+            "PortBindings": {
+                "443/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "443"
+                    }
+                ],
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "80"
+                    }
+                ]
+            },
+            "Links": [
+                "/schoolware:/nginx_server/schoolware",
+                "/eportfolio:/nginx_server/e-portfolio",
+                "/nalab:/nginx_server/nalab",
+                "/push:/nginx_server/push",
+                "/file:/nginx_server/file",
+                "/chat:/nginx_server/chat"
+            ],
+
+         ...생략...
     }
    ```
 
