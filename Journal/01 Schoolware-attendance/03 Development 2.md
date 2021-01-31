@@ -35,29 +35,27 @@ Development 1에서 발생한 문제점
    
 
    ##### 1.3. 출석값 변경
-
-```java
-@RequestMapping(value="/room/manager/Att_edit_func.do")
+   
+   ```java
+   @RequestMapping(value="/room/manager/Att_edit_func.do")
    public ModelAndView Att_edit_func(CommandMap commandMap) throws Exception {
-	ModelAndView mv = new ModelAndView("redirect:/room/manager/detailAtt.do");
-   	Map<String, String> map = new HashMap<>() ;
+       ModelAndView mv = new ModelAndView("redirect:/room/manager/detailAtt.do");
+       Map<String, String> map = new HashMap<>() ;
+       
+       try {
+           for (int i = 0; i < ((String[]) commandMap.get("id")).length; i++) {
+               map.put(((String[]) commandMap.get("id"))[i],
+                           ((String[]) commandMap.get("attendance"))[i]);
+           }
+       } catch(Exception e) {
+           map.put((String)commandMap.get("id"), (String) commandMap.get("attendance")) ;
+       }
    
-   	try {
-   		for (int i = 0; i < ((String[]) commandMap.get("id")).length; i++) {
-   			map.put(((String[]) commandMap.get("id"))[i],
-                       	((String[]) commandMap.get("attendance"))[i]);
-   		}
-   	} catch(Exception e) {
-   		map.put((String)commandMap.get("id"), (String) commandMap.get("attendance")) ;
-   	}
+       roomService.Att_edit_func(commandMap.getMap()) ;
    
-   	roomService.Att_edit_func(commandMap.getMap()) ;
-   
-   	return  mv;
+       return  mv;
    }
-```
-   
-   
+   ```
    
    여러 학생들을 모임방에 생성하고 값들을 주고받으면서 코딩을 진행하여 기능을 정상적으로 제작하였으나
    `학생이 없거나 1명일 때` 오류가 발생하였고 파라미터의 갯수에 따라
