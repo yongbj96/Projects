@@ -3,7 +3,10 @@
 
 
 ```
-두 홈페이지를 유지보수 하던 중, 스쿨웨어의 경우 파일업로드를 하면 서버와 nginx에 저장되지만 Na-Lab의 경우 서버와 nginx에 저장되지 않고 Tomcat에만 파일이 저장되었습니다. 따라서, Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를 재배포하면 파일들이 사라지는것을 확인하였고 심각한 문제를 발생시킬 수 있다고 생각하여 해결하기 위해 `docker container`를 새로 구축했습니다.
+두 홈페이지를 유지보수 하던 중, 스쿨웨어의 경우 파일업로드를 하면 서버와 nginx에 저장되지만
+Na-Lab의 경우 서버와 nginx에 저장되지 않고 Tomcat에만 파일이 저장되었습니다.
+Tomcat에만 파일이 저장되면 서버를 재구동하거나 홈페이지를 재배포하면 파일들이 사라지는것을 확인하였고
+심각한 문제를 발생시킬 수 있다고 생각하여 해결하기 위해 `docker container`를 새로 구축했습니다.
 ```
 
 
@@ -71,17 +74,20 @@
    
 
    ``` nginx
-   ...생략...
+   \cdots\cdots\cdots생략\cdots\cdots\cdots
+   
    "Binds": [
                    "/usr/etc/dockers/web/tomcat/nalab/files/file:/usr/local/tomcat/files/file",
                    "/etc/localtime:/etc/localtime",
                    "/usr/etc/dockers/web/tomcat/nalab/webapps:/usr/local/tomcat/webapps/"
                ],
-   ...생략...
+   
+   \cdots\cdots\cdots생략\cdots\cdots\cdots
+   
    ```
-
+   
    다음과 같이 정상적으로 컨테이너를 동작시키게 되었고 파일업로드를 하게되면 `/usr/local/tomcat/files/file`위치에 파일이 저장되는 것도 확인했습니다.
-
+   
    
 
 ---
@@ -95,44 +101,44 @@
    
 
    ``` nginx
-   ...생략...
-   
-   server {
-   	listen 443;
-   	server_name icnet.kornu.ac.kr;
-   
-       ...생략...
-   
-       location ^~/sch/files/file/{
-       	root /etc/nginx/;
-       }
-   
-       location ^~/sch/files/video/{
-       	root /etc/nginx/;
-       }
-   
-   	location ^~/nalab/files/file/{
-   		root /etc/nginx/;
-   	}
-   }
-   
-   server {
-       listen       80;
-       server_name  icnet.kornu.ac.kr;
-       
-       location ^~/schoolware/ {
-       	proxy_pass http://schoolware/schoolware/;
-       }
-   
-       location ^~/e-portfolio/ {
-       	proxy_pass http://e-portfolio/e-portfolio/;
-       }
-       location ^~/nalab/ {
-       	proxy_pass http://nalab/nalab/;
-       }
-   
-       ...생략...
-   }
+   \cdots\cdots\cdots생략\cdots\cdots\cdots
+      
+      server {
+      	listen 443;
+      	server_name icnet.kornu.ac.kr;
+      
+          \cdots\cdots\cdots생략\cdots\cdots\cdots
+      
+          location ^~/sch/files/file/{
+          	root /etc/nginx/;
+          }
+      
+          location ^~/sch/files/video/{
+          	root /etc/nginx/;
+          }
+      
+      	location ^~/nalab/files/file/{
+      		root /etc/nginx/;
+      	}
+      }
+      
+      server {
+          listen       80;
+          server_name  icnet.kornu.ac.kr;
+          
+          location ^~/schoolware/ {
+          	proxy_pass http://schoolware/schoolware/;
+          }
+      
+          location ^~/e-portfolio/ {
+          	proxy_pass http://e-portfolio/e-portfolio/;
+          }
+          location ^~/nalab/ {
+          	proxy_pass http://nalab/nalab/;
+          }
+      
+          \cdots\cdots\cdots생략\cdots\cdots\cdots
+      }
    ```
 
    이후 정상적으로 홈페이지에서 파일을 업로드하고 불러올 수 있게 되었습니다.
