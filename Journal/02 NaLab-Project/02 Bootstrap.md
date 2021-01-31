@@ -33,13 +33,13 @@
 
    ###### 	1.2.1. 메인페이지
 
-   ![bootstrap02](D:\Git\Projects_picture\Na-Lab\Build Na-Lab\bootstrap02.PNG)
+   ![bootstrap02](https://user-images.githubusercontent.com/43952470/106383911-b8a26380-640b-11eb-9e64-ff57d25440bd.PNG)
 
    
 
    ###### 	1.2.2. 사이드메뉴
 
-   ​	![bootstrap03](D:\Git\Projects_picture\Na-Lab\Build Na-Lab\bootstrap03.PNG)
+   ![bootstrap03](https://user-images.githubusercontent.com/43952470/106383924-be984480-640b-11eb-892c-7da921cd4542.PNG)
 
    `데모버전`을 교수님과 동아리원들이 있는 자리에서 보여주게 되었고 전체적인 페이지를 재구성하게 되었습니다.
 
@@ -47,7 +47,7 @@
 
    ##### 1.3. 2차수정
 
-   ![bootstrap04](D:\Git\Projects_picture\Na-Lab\Build Na-Lab\bootstrap04.PNG)
+   ![bootstrap04](https://user-images.githubusercontent.com/43952470/106383957-d8d22280-640b-11eb-99ba-349ee4a4ef30.PNG)
 
    `사이드메뉴`의 경우 오래된 홈페이지에서 사용한다는 의견이 많아 제거하게 되었고 사이드메뉴에 있던 항목들을 상단에 배치하게 되었습니다. 또한 그래프부분을 `썸네일`로 배치하여 센터에서 운영하는 모임방 목록을 조회할 수 있도록 수정하였고 우측에서 로그인할 수 있는 기능을 추가하게 되었습니다.
 

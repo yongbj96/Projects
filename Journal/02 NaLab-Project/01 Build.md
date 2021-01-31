@@ -69,28 +69,28 @@
 
    ```java
    public class LoggerInterceptor extends HandlerInterceptorAdapter {
-   	protected Log log = LogFactory.getLog(LoggerInterceptor.class);
+       protected Log log = LogFactory.getLog(LoggerInterceptor.class);
    
-   	@Override
-   	public boolean preHandle(HttpServletRequest request,
-                                	HttpServletResponse response,
-                                	Object handler) throws Exception {
-   		if (log.isDebugEnabled()) {
-   			log.debug(" Request URI \t:  " + request.getRequestURI());
-   		}
-   		log.debug("[Request URI]," + request.getRequestURI());
-   		return super.preHandle(request, response, handler);
-   	}
+       @Override
+       public boolean preHandle(HttpServletRequest request,
+                                HttpServletResponse response,
+                                Object handler) throws Exception {
+           if (log.isDebugEnabled()) {
+               log.debug(" Request URI \t:  " + request.getRequestURI());
+           }
+           log.debug("[Request URI]," + request.getRequestURI());
+           return super.preHandle(request, response, handler);
+       }
    
        @Override
        public void postHandle(HttpServletRequest request,
-                                  HttpServletResponse response,
-                                  Object handler,
-                                  ModelAndView modelAndView) throws Exception {
-   		if (log.isDebugEnabled()) {
-   			log.debug("==============           END          ===============\n");
-   		}
-   	}
+                              HttpServletResponse response,
+                              Object handler,
+                              ModelAndView modelAndView) throws Exception {
+           if (log.isDebugEnabled()) {
+               log.debug("==============           END          ===============\n");
+           }
+       }
    }
    ```
 
@@ -103,43 +103,43 @@
    ```java
    <!--&lt;!&ndash; 디버그용 &ndash;&gt;
    <bean id="dataSourceSpied" class="org.apache.commons.dbcp.BasicDataSource">
-   	<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-   	&lt;!&ndash; 테스트는 NaLab_beta &ndash;&gt;
-   	<property name="url" value="...생략..." />
-   	<property name="username" value="root" />
-   	<property name="password" value="...생략..." />
-   	&lt;!&ndash; 유효성 검사용 쿼리 &ndash;&gt;
-   	<property name="validationQuery" value="select 1" />
-   	&lt;!&ndash; 커넥션을 사용하지않을 때, 유효성 검사 여부판단 &ndash;&gt;
-   	<property name="testWhileIdle" value="true" />
-   	&lt;!&ndash; 해당 밀리초마다 유효성 검사 진행 &ndash;&gt;
-   	<property name="timeBetweenEvictionRunsMillis" value="7200000" />
-   </bean>
+       <property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+       &lt;!&ndash; 테스트는 NaLab_beta &ndash;&gt;
+   <property name="url" value="...생략..." />
+       <property name="username" value="root" />
+       <property name="password" value="...생략..." />
+       &lt;!&ndash; 유효성 검사용 쿼리 &ndash;&gt;
+   <property name="validationQuery" value="select 1" />
+       &lt;!&ndash; 커넥션을 사용하지않을 때, 유효성 검사 여부판단 &ndash;&gt;
+   <property name="testWhileIdle" value="true" />
+       &lt;!&ndash; 해당 밀리초마다 유효성 검사 진행 &ndash;&gt;
+   <property name="timeBetweenEvictionRunsMillis" value="7200000" />
+       </bean>
    
-   <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
-   	<constructor-arg ref="dataSourceSpied" />
-   	<property name="logFormatter">
-   		<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
-   			<property name="loggingType" value="MULTI_LINE" />
-   			<property name="sqlPrefix" value="SQL : "></property>
-   		</bean>
-   	</property>
-   </bean>-->
+       <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+           <constructor-arg ref="dataSourceSpied" />
+           <property name="logFormatter">
+           <bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+               <property name="loggingType" value="MULTI_LINE" />
+               <property name="sqlPrefix" value="SQL : "></property>
+               </bean>
+               </property>
+               </bean>-->
    
-   <!-- 배포용 -->
-   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-   	<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
-   	<!-- 테스트는 NaLab_beta -->
-   	<property name="url" value="...생략..." />
-   	<property name="username" value="root" />
-   	<property name="password" value="...생략..." />
-   	<!-- 유효 검사용 쿼리 -->
-   	<property name="validationQuery" value="select 1"/>
-   	<!-- 커넥션을 사용하지않을 때, 유효성 검사 여부판단 -->
-   	<property name="testWhileIdle" value="true"/>
-   	<!-- 해당 밀리초마다 유효성 검사 진행 -->
-   	<property name="timeBetweenEvictionRunsMillis" value="7200000"/>
-   </bean>
+               <!-- 배포용 -->
+               <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+                   <property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+                   <!-- 테스트는 NaLab_beta -->
+                   <property name="url" value="...생략..." />
+                   <property name="username" value="root" />
+                   <property name="password" value="...생략..." />
+                   <!-- 유효 검사용 쿼리 -->
+                   <property name="validationQuery" value="select 1"/>
+                   <!-- 커넥션을 사용하지않을 때, 유효성 검사 여부판단 -->
+                   <property name="testWhileIdle" value="true"/>
+                   <!-- 해당 밀리초마다 유효성 검사 진행 -->
+                   <property name="timeBetweenEvictionRunsMillis" value="7200000"/>
+                   </bean>
    ```
 
    서버용 dataBase 테이블과 로컬 테스트용 dataBase 테이블을 따로 생성을 했기 때문에 `배포용`, `디버그용`으로 나눠서 사용할 수 있도록 코드를 작성하였습니다.

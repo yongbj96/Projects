@@ -34,58 +34,58 @@
    ...생략...
    
    server {
-   	listen 443;
-   	server_name icnet.kornu.ac.kr;
+       listen 443;
+       server_name icnet.kornu.ac.kr;
    
-   	ssl ...생략...
+       ssl ...생략...;
    
-   ssl_ciphers '...생략...';
+       ssl_ciphers '...생략...';
    
-   	ssl_prefer_server_ciphers on;
+       ssl_prefer_server_ciphers on;
    
-   	location ^~/schoolware/ {
-               proxy_pass http://schoolware/schoolware/;
-           }
+       location ^~/schoolware/ {
+           proxy_pass http://schoolware/schoolware/;
+       }
    
-   	location ^~/e-portfolio/ {
-                   proxy_pass http://e-portfolio/e-portfolio/;
-           }
-   	
-   	location ^~/nalab/ {
-                   proxy_pass http://nalab/nalab/;
-           }
+       location ^~/e-portfolio/ {
+           proxy_pass http://e-portfolio/e-portfolio/;
+       }
    
-           ...생략...
+       location ^~/nalab/ {
+           proxy_pass http://nalab/nalab/;
+       }
    
-           location ^~/sch/files/file/{
-                   root /etc/nginx/;
-           }
+       ...생략...;
    
-           location ^~/sch/files/video/{
-                   root /etc/nginx/;
-           }
+       location ^~/sch/files/file/{
+           root /etc/nginx/;
+       }
    
-   	location ^~/nalab/files/file/{
-   		root /etc/nginx/;
-   	}
+       location ^~/sch/files/video/{
+           root /etc/nginx/;
+       }
+   
+       location ^~/nalab/files/file/{
+           root /etc/nginx/;
+       }
    }
    
    server {
        listen       80;
        server_name  icnet.kornu.ac.kr;
-       
-           location ^~/schoolware/ {
-                   proxy_pass http://schoolware/schoolware/;
-               }
    
-           location ^~/e-portfolio/ {
-                   proxy_pass http://e-portfolio/e-portfolio/;
-           	}
-           location ^~/nalab/ {
-                       proxy_pass http://nalab/nalab/;
-               }
-       
-           ...생략...
+       location ^~/schoolware/ {
+           proxy_pass http://schoolware/schoolware/;
+       }
+   
+       location ^~/e-portfolio/ {
+           proxy_pass http://e-portfolio/e-portfolio/;
+       }
+       location ^~/nalab/ {
+           proxy_pass http://nalab/nalab/;
+       }
+   
+       ...생략...
    }
    ```
 

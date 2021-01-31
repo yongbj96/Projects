@@ -45,10 +45,10 @@ LMS시스템을 서비스하면서 채팅시스템을 제작해보자는 의견�
            url: "Message.do", //ChatController.java
            data: { //Controller로 보내는 데이터
                id: encodeURIComponent(${user_info.id}),
-               room_num: encodeURIComponent(roomNum),
-               lastnum: encodeURIComponent(lastNUM)
-           },
-           datatype: "json",
+           room_num: encodeURIComponent(roomNum),
+           lastnum: encodeURIComponent(lastNUM)
+   },
+       datatype: "json",
            success: function(data) {
                if(lastNUM==0 && data == "") {
                    $('#Message').empty();
@@ -61,22 +61,22 @@ LMS시스템을 서비스하면서 채팅시스템을 제작해보자는 의견�
                }
                lastNUM = Number(parsed.last);
            },
-           error: function(error) {
-               console.log("error");
-           }
-       });
+               error: function(error) {
+                   console.log("error");
+               }
+   });
    }
    function addChat(id, message) { //UI꾸미는 곳
        if(id == ${user_info.id}) {
            $('#Message').append('<div style="display: flow-root;">' +
-               '<div style="float: right; padding: 10px; margin: 10px; border-radius: 15px; background-color: #f5deb390;"">' +
-               message +
-               '</div></div>');
+                                '<div style="float: right; padding: 10px; margin: 10px; border-radius: 15px; background-color: #f5deb390;"">' +
+                                message +
+                                '</div></div>');
        } else {
            $('#Message').append('<div style="display: flow-root;">' +
-               '<div style="float: left; padding: 10px; margin: 10px; border-radius: 15px; background-color: #b0e0e690;">' +
-               message +
-               '</div></div>');
+                                '<div style="float: left; padding: 10px; margin: 10px; border-radius: 15px; background-color: #b0e0e690;">' +
+                                message +
+                                '</div></div>');
        }
        $('#Message').scrollTop($('#Message')[0].scrollHeight);
    }
