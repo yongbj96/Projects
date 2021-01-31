@@ -5,14 +5,32 @@ This is based on projects I made attending while University, 2015-2020.
 
 ---
 
+- ### Troubleshooting
+
+  >[Bad Gateway](https://github.com/yongbj96/Projects/blob/main/01%20Troubleshooting/01%20Schoolware-Bad%20Gateway.md)
+  >
+  >[File upload to Server](https://github.com/yongbj96/Projects/blob/main/01%20Troubleshooting/02%20File-upload.md)
 
 
-## contents
 
-| schoolware                                                   | nalab                                                        | server                                                       |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [01 schoolware-attendance](https://github.com/yongbj96/Projects/blob/main/01%20Schoolware/01%20schoolware-attendance.md) | [01 Web-Build](https://github.com/yongbj96/Projects/blob/main/02%20Na-Lab/01%20Web-Build.md) | [01 Server-Build](https://github.com/yongbj96/Projects/blob/main/03%20Server/01%20Server-Build.md) |
-| [02 schoolware-Bad Gateway](https://github.com/yongbj96/Projects/blob/main/01%20Schoolware/02%20schoolware-Bad%20Gateway.md) | [02 Na-Lab-MainPage](https://github.com/yongbj96/Projects/blob/main/02%20Na-Lab/02%20Na-Lab-MainPage.md) | [02 File-uploading](https://github.com/yongbj96/Projects/blob/main/03%20Server/02%20File-uploading.md) |
-|                                                              | [03 Chat](https://github.com/yongbj96/Projects/blob/main/02%20Na-Lab/03%20Chatting.md) |                                                              |
-|                                                              |                                                              |                                                              |
+- ### Journal
 
+  >#### [Func. attendance](https://github.com/yongbj96/Projects/tree/main/02%20Journal/01%20Schoolware-attendance)
+  >
+  >- [Plan](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/01%20Plan.md)
+  >- [Development 1](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/02%20Development%201.md)
+  >- [Development 2](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/03%20Development%202.md)
+  >- [Development 3](https://github.com/yongbj96/Projects/blob/main/02%20Journal/01%20Schoolware-attendance/04%20Development%203.md)
+  >
+  >
+  >
+  >#### [Project. Na-Lab](https://github.com/yongbj96/Projects/tree/main/02%20Journal/02%20NaLab-Project)
+  >
+  >- [Gideline](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/01%20Build.md)
+  >- [Bootstrap](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/02%20Bootstrap.md)
+  >- [Develop mainpage](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/03%20Mainpage.md)
+  >- [Develop chat service](https://github.com/yongbj96/Projects/blob/main/02%20Journal/02%20NaLab-Project/04%20Chat.md)
+  >
+  >
+  >
+  >##### [Build server](https://github.com/yongbj96/Projects/blob/main/02%20Journal/03%20Server-Build/01%20Server-Build.md)
