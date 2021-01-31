@@ -25,33 +25,33 @@ Development 2에서 발생한 문제점
    
 
    ##### 1.2. 출석데이터 삭제(RoomServiceImpl)
-
-``` java
-@Override
-   public void delete_Attendance(Map<String, Object> map) throws Exception {
-	List<Map<String, Object>> stu_list = roomDAO.detailAtt(map) ;
    
-	for(int a=0; a<stu_list.size(); a++) { /* room_code, week, id */
-   		map.put("id", stu_list.get(a).get("id")) ;
-		if(stu_list.get(a).get("attendance").toString().equals("O")) {
-   			roomDAO.minus_total_circle(map) ;
-		} else if(stu_list.get(a).get("attendance").toString().equals("X")) {
-   			roomDAO.minus_total_x(map) ;
-			} else if(stu_list.get(a).get("attendance").toString().equals("/")) {
-   			roomDAO.minus_total_slash(map) ;
-   		}
-   		map.remove("id") ;
-   	}
-   	roomDAO.delete_stu_Att(map) ;
-   	roomDAO.delete_room_Att(map) ;
+   ``` java
+   @Override
+   public void delete_Attendance(Map<String, Object> map) throws Exception {
+       List<Map<String, Object>> stu_list = roomDAO.detailAtt(map) ;
+   
+       for(int a=0; a<stu_list.size(); a++) { /* room_code, week, id */
+           map.put("id", stu_list.get(a).get("id")) ;
+           if(stu_list.get(a).get("attendance").toString().equals("O")) {
+               roomDAO.minus_total_circle(map) ;
+           } else if(stu_list.get(a).get("attendance").toString().equals("X")) {
+               roomDAO.minus_total_x(map) ;
+           } else if(stu_list.get(a).get("attendance").toString().equals("/")) {
+               roomDAO.minus_total_slash(map) ;
+           }
+           map.remove("id") ;
+       }
+       roomDAO.delete_stu_Att(map) ;
+       roomDAO.delete_room_Att(map) ;
    }
-```
+   ```
    
    `room_code`와 `week`값을 파라미터로 전송받아서 저장된 `class_att_data`의 데이터들을 삭제시키는 기능을 제작하였습니다.
    
    반복문을 통해 수강중인 학생들의 `id`와 파라미터로 받은 `room_code`, `week`값을 통해 `class_att`의 출석 데이터들을 삭제시키는 기능을 추가하였습니다.
    
-   
+      
 
 ---
 
