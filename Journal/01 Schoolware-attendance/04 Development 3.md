@@ -26,7 +26,7 @@ Development 2에서 발생한 문제점
 
    ##### 1.2. 출석데이터 삭제(RoomServiceImpl)
 
-   ``` java
+``` java
 @Override
    public void delete_Attendance(Map<String, Object> map) throws Exception {
 	List<Map<String, Object>> stu_list = roomDAO.detailAtt(map) ;
@@ -45,7 +45,7 @@ Development 2에서 발생한 문제점
    	roomDAO.delete_stu_Att(map) ;
    	roomDAO.delete_room_Att(map) ;
    }
-   ```
+```
    
    `room_code`와 `week`값을 파라미터로 전송받아서 저장된 `class_att_data`의 데이터들을 삭제시키는 기능을 제작하였습니다.
    
@@ -76,7 +76,7 @@ Development 2에서 발생한 문제점
 
    ![attendance44](https://user-images.githubusercontent.com/43952470/106374752-34c78780-63c9-11eb-938c-cfdebd21c7fe.PNG)
 
-   ``` java
+``` java
    @Override
    public boolean insert_stuAtt(Map<String, Object> map, HttpServletRequest req) throws Exception {
        boolean flag = false ;
@@ -122,7 +122,7 @@ Development 2에서 발생한 문제점
        
        return flag ;
    }
-   ```
+```
 
    `2.2.`의 기능이 동작하면서 난수와 난수가 발생한 시간을 `class_att_data`에 저장하게 되는데, 학생이 난수를 입력하면 입력한 시간과 저장된 시간을 비교하고 출석값을 자동으로 저장합니다.
 
