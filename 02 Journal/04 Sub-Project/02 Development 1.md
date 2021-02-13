@@ -31,13 +31,13 @@
 
    ##### 1.2. 기본 환경설정
 
-   ###### 	1.2.1.  settings.py 설정
+   ###### 		1.2.1.  settings.py 설정
 
    ​	`member` 앱을 사용할 수 있도록 선언해주었습니다.
 
    
 
-   ###### 	1.2.2. Project.urlpatterns 설정
+   ###### 		1.2.2. Project.urlpatterns 설정
 
    ```python
    urlpatterns = [
@@ -49,7 +49,7 @@
    
    
    
-   ###### 	1.2.3. Member.urlpatterns 설정
+   ###### 		1.2.3. Member.urlpatterns 설정
    
    ​	`member`폴더에 `urls.py` 파일을 생성하였고 `urlpatterns`를 작성하였습니다.
    
@@ -89,13 +89,13 @@
            verbose_name_plural = '게시판멤버들' # 해당 테이블을 조회할 때 테이블이름 (기본값 = "verbose_name"+s)
    ```
    
-   ###### 	2.1.1. 기본문법
+   ###### 		2.1.1. 기본문법
    
    ​	`db_table`: 데이터베이스에 저장될 테이블의 명칭.
    ​	`verbose_name`: 해당 테이블을 가져올 때, 값들의 명칭.
    ​	`verbose_name_plural`: 해당 테이블을 가져올 때, 테이블의 명칭. (기본값 = `verbose_name`+`s`)
    
-   ###### 	2.1.2. 데이터  저장방식
+   ###### 		2.1.2. 데이터  저장방식
    
    ​	`CharField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)
    ​	`EmailField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)
