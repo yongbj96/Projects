@@ -131,7 +131,7 @@
            return render(request, 'register.html', res_data)
    ```
    
-   `GET`방식으로 `member.regiser`가 호출되면 `register.html`를 반환. ([2.3. `View` 설정](#2.3.))
+   `GET`방식으로 `member.regiser`가 호출되면 `register.html`를 반환.
    
    
    
@@ -139,7 +139,7 @@
    
    
    
-   ##### 2.3. `View`[CSS](#3)
+   ##### 2.3. `View`
    
    ![01](https://user-images.githubusercontent.com/43952470/107841951-e96a9b80-6e02-11eb-9f8d-8b88e7db7b43.PNG)
    
