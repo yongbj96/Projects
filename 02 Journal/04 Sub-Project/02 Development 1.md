@@ -100,8 +100,8 @@
    ​	`CharField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)<br/>
    ​	`EmailField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)<br/>
    ​	`DateTimeField`: Datatype은 `DATETIME`으로 데이터를 저장.<br/>
-   ​		`auto_now_add` - 생성당시의 날짜/시간 입력<br/>
-   ​		`auto_now` - 데이터를 조작한 당시의 날짜/시간 입력
+   ​	&nbsp;&nbsp;`auto_now_add` - 생성당시의 날짜/시간 입력<br/>
+   ​	&nbsp;&nbsp;`auto_now` - 데이터를 조작한 당시의 날짜/시간 입력
    
    
    
