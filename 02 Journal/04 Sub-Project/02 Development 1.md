@@ -91,16 +91,16 @@
    
    ###### 		2.1.1. 기본문법
    
-   ​	`db_table`: 데이터베이스에 저장될 테이블의 명칭.
-   ​	`verbose_name`: 해당 테이블을 가져올 때, 값들의 명칭.
+   ​	`db_table`: 데이터베이스에 저장될 테이블의 명칭.<br/>
+   ​	`verbose_name`: 해당 테이블을 가져올 때, 값들의 명칭.<br/>
    ​	`verbose_name_plural`: 해당 테이블을 가져올 때, 테이블의 명칭. (기본값 = `verbose_name`+`s`)
    
    ###### 		2.1.2. 데이터  저장방식
    
-   ​	`CharField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)
-   ​	`EmailField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)
-   ​	`DateTimeField`: Datatype은 `DATETIME`으로 데이터를 저장.
-   ​		`auto_now_add` - 생성당시의 날짜/시간 입력
+   ​	`CharField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)<br/>
+   ​	`EmailField`: Datatype은 `VARCHAR`으로 데이터를 저장. (길이: 100)<br/>
+   ​	`DateTimeField`: Datatype은 `DATETIME`으로 데이터를 저장.<br/>
+   ​		`auto_now_add` - 생성당시의 날짜/시간 입력<br/>
    ​		`auto_now` - 데이터를 조작한 당시의 날짜/시간 입력
    
    
