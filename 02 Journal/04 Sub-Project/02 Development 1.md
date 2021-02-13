@@ -31,13 +31,13 @@
 
    ##### 1.2. 기본 환경설정
 
-   ###### 	1.2.1.  `settings.py` 설정
+   ###### 	1.2.1.  settings.py 설정
 
    ​	`member` 앱을 사용할 수 있도록 선언해주었습니다.
 
    
 
-   ###### 	1.2.2. `Project.urlpatterns` 설정
+   ###### 	1.2.2. Project.urlpatterns 설정
 
    ```python
    urlpatterns = [
@@ -45,11 +45,11 @@
    ]
    ```
    
-   ​	`member` 로 들어오는 `url`들을 해당 `app`의 `urls.py` 파일에서 관리할 수 있는 명령어를 추가하였습니다.
+   ​	`localhost:PORT/member` 을 해당 앱의 `urls.py`에서 관리할 수 있도록 선언하였습니다.
    
    
    
-   ###### 	1.2.3. `Member.urlpatterns` 설정
+   ###### 	1.2.3. Member.urlpatterns 설정
    
    ​	`member`폴더에 `urls.py` 파일을 생성하였고 `urlpatterns`를 작성하였습니다.
    
@@ -67,7 +67,7 @@
 
 2. #### Model, Controller, View 작성
 
-   ##### 2.1. `Model` 설정
+   ##### 2.1. Model 설정
 
    `member`에서 사용할 데이터모델은 다음과 같이 설정하였습니다.
 
@@ -105,7 +105,7 @@
    
    
    
-   ##### 2.2. `Controller` 설정
+   ##### 2.2. Controller 설정
    
    ```python
    def register(request):
@@ -139,7 +139,7 @@
    
    
    
-   ##### 2.3. `View`
+   ##### 2.3. View
    
    ![01](https://user-images.githubusercontent.com/43952470/107841951-e96a9b80-6e02-11eb-9f8d-8b88e7db7b43.PNG)
    
@@ -171,7 +171,7 @@
 
 ---
 
-3. #### `Css`설정
+3. #### Css설정
 
    `css`파일을 다운받고 `member/static`폴더아래에 복사, 해당 파일을 사용하기위해 `settings.py`에 선언하였습니다.
 
