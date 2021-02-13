@@ -20,7 +20,7 @@
    ##### 1.1. Django - startapp 생성
 
    ```shell
-python manager.py startapp member
+   python manager.py startapp member
    ```
 
    
@@ -72,7 +72,7 @@ python manager.py startapp member
    `member`에서 사용할 데이터모델은 다음과 같이 설정하였습니다.
 
    ```python
-class BoardMember(models.Model):
+   class BoardMember(models.Model):
        username    = models.CharField(max_length=100, verbose_name='유저Id')
        password    = models.CharField(max_length=100, verbose_name='유저PW')
        email       = models.EmailField(max_length=100, verbose_name='유저메일')
@@ -178,7 +178,7 @@ class BoardMember(models.Model):
    `css`파일을 다운받고 `member/static`폴더아래에 복사, 해당 파일을 사용하기위해 `settings.py`에 선언하였습니다.
 
    ```python
-STATIC_URL = '/static/'
+   STATIC_URL = '/static/'
    STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), # import os 입력시 사용가능
    ]
