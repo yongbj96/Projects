@@ -39,4 +39,4 @@ This is based on projects I made attending while University, 2015-2020.
   >
   >- [GideLine](https://github.com/yongbj96/Projects/blob/main/02%20Journal/04%20Sub-Project/01%20GuideLine.md)
   >- [Development 1](https://github.com/yongbj96/Projects/blob/main/02%20Journal/04%20Sub-Project/02%20Development%201.md)
-
+  >- [ERD](https://github.com/yongbj96/Projects/blob/main/02%20Journal/04%20Sub-Project/03%20ERD.md)
