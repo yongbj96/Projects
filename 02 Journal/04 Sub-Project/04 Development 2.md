@@ -184,7 +184,7 @@
 
    
 
-   1. ##### 보통 방식으로 url조회
+   1. #### 보통 방식으로 url조회
 
    ![01](https://user-images.githubusercontent.com/43952470/110213306-cfdce100-7ee2-11eb-8ffc-2cc34222208f.PNG)
 
@@ -192,7 +192,7 @@
 
    
 
-   2. ##### `token`생성 (현재 admin 계정으로 생성)
+   2. #### `token`생성 (현재 admin 계정으로 생성)
 
    ![02](https://user-images.githubusercontent.com/43952470/110213489-a1abd100-7ee3-11eb-9fca-8ef38131f759.PNG)
 
@@ -200,7 +200,7 @@
 
    
 
-   3. ##### 기존 `url`에 `Authorization`에 `jwt {token}`으로 값을 전송
+   3. #### 기존 `url`에 `Authorization`에 `jwt {token}`으로 값을 전송
 
    ![03](https://user-images.githubusercontent.com/43952470/110213516-c30cbd00-7ee3-11eb-9bc8-49a3e57babd7.PNG)
 
@@ -208,7 +208,7 @@
 
    
 
-   4. ##### token 확인: {url}/api/token/verify
+   4. #### token 확인: {url}/api/token/verify
 
    ![04](https://user-images.githubusercontent.com/43952470/110213598-0ff09380-7ee4-11eb-8cb9-24a5bd263cc2.PNG)
 
@@ -222,7 +222,7 @@
 
    
 
-   5. ##### token 갱신: {url}/api/token/refresh
+   5. #### token 갱신: {url}/api/token/refresh
 
    ![06](https://user-images.githubusercontent.com/43952470/110213717-85f4fa80-7ee4-11eb-916a-5841159b6600.PNG)
 
