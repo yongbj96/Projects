@@ -33,7 +33,7 @@ Python에서 사용할 수 있도록 mysqlclient 설치
 
 
 
-`settings.py` 작성
+"settings.py "
 
 ``` python
 DATABASES = {

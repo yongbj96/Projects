@@ -14,7 +14,7 @@
 
 
 
-`<앱이름>/models.py` 작성
+"<앱이름>/models.py"
 
 ``` python
 class People(models.Model):
@@ -39,7 +39,7 @@ Admin 모듈에 등록하여 관리자페이지에서 Table을 관리할 수 있
 
 
 
-`<앱이름>/admin.py`
+"<앱이름>/admin.py"
 
 ``` python
 from member.models import People
