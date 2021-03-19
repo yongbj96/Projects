@@ -108,7 +108,7 @@ router.register('member', MemberViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include(router.urls)),
+    path('', include(router.urls)),
 ]
 ```
 
@@ -126,4 +126,4 @@ urlpatterns = [
 
 - DB에는 자동으로 저장
 
-![image-20210318172644395](C:\Users\yong_\AppData\Roaming\Typora\typora-user-images\image-20210318172644395.png)
+![image](https://user-images.githubusercontent.com/43952470/111595486-83ad6d00-880f-11eb-9009-624d9f79d7db.png)
