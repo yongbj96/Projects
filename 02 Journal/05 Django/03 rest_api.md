@@ -76,6 +76,10 @@ class MemberSerializers(serializers.ModelSerializer):
         fields = ('id', 'username', 'age')
 ```
 
+##### * serializers: rest_framework에서 제공하는 기능임!!! -> Model을 생성한다고 무조건 작성하는게 아님.
+
+##### * Router: 또한 rest_framework에서 제공하는 기능!!(04 Router에서 언급)
+
 
 
 ## 04 View 작성

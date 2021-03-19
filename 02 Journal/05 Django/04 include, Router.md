@@ -58,7 +58,7 @@ url을 `views.py`에 작성한 페이지와 연결하는 방식.
 
 ## 02 Router
 
-`rest_framework`에서 제공하는 기능, `url`을 자동으로 매핑해주는 역할을 한다.
+##### * `rest_framework`에서 제공하는 기능, `url`을 자동으로 매핑해주는 역할을 한다.
 
 참고링크: https://www.django-rest-framework.org/api-guide/routers/
 
