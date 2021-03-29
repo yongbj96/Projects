@@ -3,8 +3,9 @@
 토큰 기반 인증 시스템(Stateless 서버)
 
 ``` 
-참고블로그: https://moondol-ai.tistory.com/173,
-		https://moondol-ai.tistory.com/174
+참고블로그: https://jpadilla.github.io/django-rest-framework-jwt/ # 실패
+		https://moondol-ai.tistory.com/173 # 실패
+		https://velog.io/@lemontech119/DRF%EB%A1%9C-%EC%84%9C%EB%B2%84-%EA%B0%9C%EB%B0%9C1-%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5 # 예정
 ```
 
 

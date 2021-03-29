@@ -49,6 +49,11 @@ DATABASES = {
         'PORT': '' # default=3306
     }
 }
+
+# 하단의 다국어 및 지역 시간 설정(20210329 추가)
+LANGUAGE_CODE = 'ko-kr'
+
+TOME_ZONE = 'Asia/Seoul'
 ```
 
 
