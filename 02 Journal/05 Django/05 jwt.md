@@ -5,7 +5,7 @@
 ``` 
 참고블로그: https://jpadilla.github.io/django-rest-framework-jwt/ # 실패
 		https://moondol-ai.tistory.com/173 # 실패
-		https://velog.io/@lemontech119/DRF%EB%A1%9C-%EC%84%9C%EB%B2%84-%EA%B0%9C%EB%B0%9C1-%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5 # 예정
+		https://velog.io/@lemontech119/DRF%EB%A1%9C-%EC%84%9C%EB%B2%84-%EA%B0%9C%EB%B0%9C1-%ED%9A%8C%EC%9B%90%EA%B8%B0%EB%8A%A5 # 실패
 ```
 
 
@@ -68,3 +68,10 @@ JWT_AUTH = {
 REST_USE_JWT = True
 ```
 
+
+
+이후 실습 몇가지를 추가로 진행하였으나 실패..
+
+
+
+새로운 md파일로 작성할 예정입니다.
